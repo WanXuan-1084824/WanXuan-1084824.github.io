@@ -1,0 +1,71 @@
+body{
+margin: 0;
+background: #201733;
+color: #e1daf0;
+}
+
+.container{
+display: flex;
+gap: 40px;
+margin-top: 50px;
+}
+
+.sidebar{
+width: 450px;
+height: 300px;
+background: #2c113d;
+border: 1px solid #333;
+border-radius: 20px;
+padding: 30px;
+text-align: center;
+margin-left: 40px;
+}
+
+.over{
+flex: 1; /*gebruik vresterende ruimte */
+background: #2c113d;
+border-radius: 20px;
+border: 1px solid #333;
+padding: 30px;
+position: relative;
+margin-right: 40px;
+}
+
+.contact{
+margin: 40px;
+font-size: 25px;
+background: #582080;
+padding: 10px;
+border: 2px solid ;
+border-radius: 150px;
+}
+
+.contact a{
+text-decoration: none;
+color: #e1daf0;
+
+}
+
+h1{
+font-size: 35px;
+}
+
+h2{
+font-size: 30px;
+}
+
+p{
+font-size: 25px;
+}
+
+.social{
+gap: 40px;
+display: flex;
+color: white;
+justify-content: center;
+}
+
+.social svg{
+fill: white;
+}
+
