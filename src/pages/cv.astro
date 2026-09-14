@@ -1,5 +1,7 @@
 ---
-import Navigation from '../components/Navigation.astro';
+import Sidebar from '../components/Sidebar.astro';
+import Resume from '../components/Resume.astro';
+import '../styles/index.css'
 ---
 
 <html lang="nl">
@@ -13,19 +15,10 @@ import Navigation from '../components/Navigation.astro';
 	</head>
 
 	<body>
-		<Navigation />
-
-		<h1>CV</h1>
-		<h2>Opleiding</h2>
-		<p>Hogeschool Rotterdam</p>
-		<p>Hogeschool Leiden</p>
-		<p>De Passie</p>
-		<p>PCB De Parel</p>
-
-		<h2>Werkervaring</h2>
-		<p>Boon's Pitstop Rotterdam </p>
-		<p>Shabu To Go Rotterdam Zuid</p>
-
-		<p>downloaden cv.pdf</p>
+	<main class="container">
+        <Sidebar />
+        <Resume />
+    </main>
 	</body>
+
 </html>

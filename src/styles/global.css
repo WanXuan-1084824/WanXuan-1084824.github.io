@@ -1,0 +1,38 @@
+body{
+margin: 0;
+background: #201733;
+color: #e1daf0;
+}
+
+.container{
+display: flex;
+gap: 40px;
+margin-top: 50px;
+}
+
+h1{
+font-size: 35px;
+}
+
+h2{
+font-size: 32.5px;
+text-decoration: underline;
+}
+
+h3{
+font-size: 30px;
+}
+
+p{
+font-size: 25px;
+}
+
+.info{
+    flex: 1; /*gebruik resterende ruimte */
+    background: #2c113d;
+    border-radius: 20px;
+    border: 1px solid #333;
+    padding: 30px;
+    position: relative;
+    margin-right: 40px;
+    }
