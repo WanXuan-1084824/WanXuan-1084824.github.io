@@ -1,87 +1,90 @@
 ---
+const opleidingen =[
+    {
+        school: "Hogeschool Rotterdam",
+        periode: "2025-heden",
+        opleiding: "AD Software Development",
+    },
+
+    {
+        school: "Hogeschool Leiden",
+        periode: "Sep.2024-Dec.2024",
+        opleiding: "HBO Informatica: Forensisch ICT",
+    },
+
+    {
+        school: "De Passie",
+        opleiding: "Middelbare school: HAVO E&M en C&M",
+    },
+
+    {
+        school: "PCB De Parel",
+        opleiding: "Basisschool",
+    },
+];
+
+const werkervaring = [
+    {
+        bedrijf: "Boon's Pitstop Rotterdam",
+        periode: "Mrt.2025-Okt.2026",
+        functie: "Allround medewerker",
+    },
+    {
+        bedrijf: "Shabu To Go Rotterdam Zuid",
+        periode: "Okt.2021-Feb.2026",
+        functie: "Baliemedewerker",
+    },
+];
+
 import Navigation from '../components/Navigation.astro';
 ---
+
 <section class="info">
-		<Navigation />
-		<h2>CV</h2>
-		<h3>Opleiding</h3>
-		<div class="cv">
-            <div class="cv-header">
-                <p>Hogeschool Rotterdam</p>
-                <p>2025-heden</p>
-            </div>
+    <Navigation />
+    <h2>CV</h2>
 
-		    <span>AD Software Development</span>
-        </div>
-
+    <h3>Opleiding</h3>
+    {opleidingen.map((opleiding) => (
         <div class="cv">
             <div class="cv-header">
-                <p>Hogeschool Leiden</p>
-                <p>Sep.2024-Dec.2024</p>
+                <p>{opleiding.school}</p>
+                <p>{opleiding.periode}</p>
             </div>
-
-		    <span>HBO Informatica: Forensisch ICT</span>
+            <span>{opleiding.opleiding}</span>
         </div>
+    ))}
 
-        <div class="cv">
-            <div class="cv-header">
-                <p>De Passie</p>
+    <h3>Werkervaring</h3>
+        {werkervaring.map((werk) => (
+            <div class="cv">
+                <div class="cv-header">
+                    <p>{werk.bedrijf}</p>
+                    <p>{werk.periode}</p>
+                </div>
+                <span>{werk.functie}</span>
             </div>
+        ))}
+</section >
 
-		    <span>Middelbare school</span>
-        </div>
+<style>
+    h3 {
+        margin-bottom: -20px;
+    }
 
-        <div class="cv">
-            <div class="cv-header">
-                <p>PCB De Parel</p>
-            </div>
+    .cv {
+        margin-bottom: 15px;
+    }
 
-		    <span>Basisschool</span>
-        </div>
+    .cv-header {
+        display: flex;
+        justify-content: space-between;
+    }
 
+    .cv-header p {
+        margin-bottom: 5px;
+    }
 
-
-		<h3>Werkervaring</h3>
-		<div class="cv">
-            <div class="cv-header">
-                <p>Boon's Pitstop Rotterdam</p>
-                <p>Mrt.2025-Okt.2026</p>
-            </div>
-
-		    <span>Allround medewerker</span>
-        </div>
-
-        <div class="cv">
-            <div class="cv-header">
-                <p>Shabu To Go Rotterdam Zuid</p>
-                <p>Okt.2021-Feb.2026</p>
-            </div>
-
-		    <span>Baliemedewerker</span>
-        </div>
-		</section >
-
-		<style>
-		h3 {
-            margin-bottom: -20px;
-
-        }
-
-		.cv{
-		margin-bottom: 15px;
-		}
-
-		.cv-header {
-            display: flex;
-            justify-content: space-between;
-
-        }
-
-        .cv-header p{
-            margin-bottom: 5px;
-        }
-
-        span{
+    span {
         font-size: 20px;
-        }
-		</style>
+    }
+</style>
