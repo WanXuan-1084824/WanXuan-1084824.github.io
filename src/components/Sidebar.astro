@@ -1,8 +1,10 @@
 ---
+import profielfoto from "../assets/profielfoto.JPG";
 ---
 <aside class="sidebar">
 <div>
 <h1>Wan Xuan Lin</h1>
+<img src={profielfoto.src}>
                 <p>Software Development Student</p>
             </div>
 
@@ -35,7 +37,7 @@
         <style>
         .sidebar{
             width: 450px;
-            height: 300px;
+            height: 520px;
             background: #2c113d;
             border: 1px solid #333;
             border-radius: 20px;
@@ -56,6 +58,13 @@
         .contact a{
         text-decoration: none;
         color: #e1daf0;
+        }
+
+        .sidebar img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
         }
 
         .social{
